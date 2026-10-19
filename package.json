@@ -1,0 +1,38 @@
+
+{
+  "name": "commitra",
+  "displayName": "Commitra",
+  "description": "Turn Git commits into daily developer progress updates",
+  "version": "0.0.1",
+  "publisher": "pooarasu",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+ "activationEvents": [
+  "onCommand:commitra.generateDailyReport"
+],
+  "contributes": {
+    "commands": [
+     {
+  "command": "commitra.generateDailyReport",
+  "title": "Commitra: Generate Daily Report"
+}
+    ]
+  },
+  "scripts": {
+    "lint": "eslint extension.js",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.0.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
